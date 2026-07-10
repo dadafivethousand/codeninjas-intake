@@ -77,10 +77,6 @@ export default function App() {
         ) : (
           <>
             <h1 className="title">Book a Free Session</h1>
-            <p className="subtitle">
-              Kids ages 5&ndash;14 learn to code by building video games. Leave
-              your info and we'll reach out.
-            </p>
 
             <form onSubmit={onSubmit} noValidate>
               <div className="row">
@@ -89,7 +85,7 @@ export default function App() {
                   <input name="firstName" value={form.firstName} onChange={onChange} autoComplete="given-name" />
                 </label>
                 <label className="field">
-                  <span>Last name <em className="opt">(optional)</em></span>
+                  <span>Last name</span>
                   <input name="lastName" value={form.lastName} onChange={onChange} autoComplete="family-name" />
                 </label>
               </div>
@@ -124,10 +120,6 @@ export default function App() {
           </>
         )}
       </div>
-
-      <p className="foot">
-        Code Ninjas Woodbridge &nbsp;·&nbsp; cnwoodbridge.com &nbsp;·&nbsp; (647) 887-9940
-      </p>
     </div>
   );
 }
