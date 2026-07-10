@@ -1,0 +1,8 @@
+name = "codeninjas-intake"
+compatibility_date = "2025-01-01"
+pages_build_output_dir = "dist"
+
+# Lead storage — separate KV namespace from the gyms' worker.
+[[kv_namespaces]]
+binding = "CN_LEADS"
+id = "f4b730169b5c4004a2b04191391fb058"
