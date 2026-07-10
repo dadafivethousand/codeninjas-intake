@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "./assets/logo.png";
 
 const validateEmail = (e) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e);
@@ -12,9 +12,15 @@ export default function App() {
   const cleanedPhone = form.phone.replace(/\D/g, "");
   const isValid =
     form.firstName.trim() !== "" &&
-    form.lastName.trim() !== "" &&
     validateEmail(form.email) &&
     cleanedPhone.length === 10;
+
+  // after a successful submit, auto-reset back to the empty form for the next lead
+  useEffect(() => {
+    if (status !== "success") return;
+    const t = setTimeout(() => setStatus("idle"), 4000);
+    return () => clearTimeout(t);
+  }, [status]);
 
   const onChange = (e) => {
     const { name, value } = e.target;
@@ -83,7 +89,7 @@ export default function App() {
                   <input name="firstName" value={form.firstName} onChange={onChange} autoComplete="given-name" />
                 </label>
                 <label className="field">
-                  <span>Last name</span>
+                  <span>Last name <em className="opt">(optional)</em></span>
                   <input name="lastName" value={form.lastName} onChange={onChange} autoComplete="family-name" />
                 </label>
               </div>

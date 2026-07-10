@@ -75,6 +75,13 @@ form { display: flex; flex-direction: column; gap: 14px; }
   text-transform: uppercase;
   color: var(--muted);
 }
+.field > span .opt {
+  font-style: normal;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  opacity: 0.7;
+}
 
 input {
   width: 100%;

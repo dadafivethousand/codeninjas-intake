@@ -28,7 +28,7 @@ export async function onRequestPost({ request, env }) {
     // silently accept bot submissions (honeypot filled) without storing
     if (honeypot) return json({ ok: true });
 
-    if (!firstName || !lastName) return json({ message: "Please enter your name." }, 400);
+    if (!firstName) return json({ message: "Please enter your first name." }, 400);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ message: "Please enter a valid email." }, 400);
     if (phone.length !== 10) return json({ message: "Please enter a valid 10-digit phone number." }, 400);
 
