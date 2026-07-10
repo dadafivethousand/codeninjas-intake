@@ -15,8 +15,7 @@ html, body, #root { height: 100%; margin: 0; }
 body {
   font-family: "Montserrat", system-ui, sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(120% 90% at 50% -10%, #eaf5fb 0%, #dcecf6 40%, #cfe4f1 100%);
+  background: #fff;
 }
 
 .page {
@@ -85,7 +84,7 @@ input {
   padding: 13px 14px;
   border: 1.5px solid var(--line);
   border-radius: 11px;
-  background: #fbfdfe;
+  background: #fff;
   transition: border-color .15s, box-shadow .15s;
 }
 input:focus {

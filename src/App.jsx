@@ -95,7 +95,7 @@ export default function App() {
 
               <label className="field">
                 <span>Phone</span>
-                <input name="phone" inputMode="tel" value={form.phone} onChange={onChange} placeholder="(647) 555-0123" autoComplete="tel" />
+                <input name="phone" inputMode="tel" value={form.phone} onChange={onChange} autoComplete="tel" />
               </label>
 
               {/* honeypot — hidden from real users */}
