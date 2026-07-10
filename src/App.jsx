@@ -76,7 +76,7 @@ export default function App() {
           </div>
         ) : (
           <>
-            <h1 className="title">Book a Free Session</h1>
+            <h1 className="title">Reserve a Free Session</h1>
 
             <form onSubmit={onSubmit} noValidate>
               <div className="row">
@@ -89,7 +89,7 @@ export default function App() {
                   <input name="lastName" value={form.lastName} onChange={onChange} autoComplete="family-name" />
                 </label>
               </div>
-
+   <div className="row">
               <label className="field">
                 <span>Email</span>
                 <input name="email" type="email" value={form.email} onChange={onChange} autoComplete="email" />
@@ -99,7 +99,7 @@ export default function App() {
                 <span>Phone</span>
                 <input name="phone" inputMode="tel" value={form.phone} onChange={onChange} autoComplete="tel" />
               </label>
-
+</div>
               {/* honeypot — hidden from real users */}
               <input
                 className="hp"
