@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
 
 :root {
-  --cn: #3090b8;         /* Code Ninjas blue */
-  --cn-br: #45a8d0;
-  --cn-dk: #22708f;
-  --ink: #14202b;
-  --muted: #5b6b78;
-  --line: #dde5ec;
+  --cn: #1a1a1a;         /* neutral near-black accent */
+  --cn-br: #333333;
+  --cn-dk: #000000;
+  --ink: #14181c;
+  --muted: #6b7280;
+  --line: #e4e7eb;
 }
 
 * { box-sizing: border-box; }
@@ -34,7 +34,7 @@ body {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: 20px;
-  box-shadow: 0 18px 50px rgba(20, 60, 90, 0.16);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.10);
   padding: 30px 30px 34px;
 }
 
@@ -90,7 +90,7 @@ input {
 input:focus {
   outline: none;
   border-color: var(--cn);
-  box-shadow: 0 0 0 3px rgba(48, 144, 184, 0.18);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
   background: #fff;
 }
 
@@ -115,10 +115,10 @@ input:focus {
   border-radius: 12px;
   padding: 15px 20px;
   cursor: pointer;
-  box-shadow: 0 8px 20px rgba(48, 144, 184, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
   transition: transform .1s, box-shadow .15s, opacity .15s;
 }
-.btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(48, 144, 184, 0.45); }
+.btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(0, 0, 0, 0.30); }
 .btn:active:not(:disabled) { transform: translateY(0); }
 .btn:disabled { opacity: 0.5; cursor: not-allowed; box-shadow: none; }
 
@@ -128,9 +128,9 @@ input:focus {
   width: 66px; height: 66px; margin: 4px auto 16px;
   display: grid; place-items: center;
   border-radius: 50%;
-  background: linear-gradient(180deg, #45a8d0, var(--cn));
+  background: linear-gradient(180deg, var(--cn-br), var(--cn));
   color: #fff; font-size: 34px; font-weight: 900;
-  box-shadow: 0 10px 24px rgba(48, 144, 184, 0.4);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
   animation: pop .45s cubic-bezier(.2,1.6,.3,1) both;
 }
 @keyframes pop { 0% { transform: scale(.5); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
